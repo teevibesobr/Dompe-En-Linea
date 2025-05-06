@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOMPE</title>
+  <link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+  <h1>DOMPE</h1>
+  <div id="lobby">
+    <input id="playerName" placeholder="Tu nombre">
+    <input id="roomCode" placeholder="Código de sala">
+    <button onclick="joinRoom()">Entrar</button>
+  </div>
+  <div id="game" style="display:none;">
+    <p id="status"></p>
+    <button onclick="startGame()">Comenzar</button>
+    <div id="players"></div>
+    <div id="phrases">
+      <button onclick="sendPhrase('Que yukon traigo')">Que yukon traigo</button>
+      <button onclick="sendPhrase('Arriba las aguilas')">Arriba las aguilas</button>
+      <button onclick="sendPhrase('PTM me servia esa')">PTM me servia esa</button>
+      <button onclick="sendPhrase('¿Cheves?')">¿Cheves?</button>
+    </div>
+    <div id="board"></div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
